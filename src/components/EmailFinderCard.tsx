@@ -2,70 +2,39 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
 import { User, Building2, Sparkles, Copy, Check, Loader2 } from "lucide-react";
 import { toast } from "sonner";
-
-const emailFormats = [
-  { value: "auto", label: "Auto Detect" },
-  { value: "firstname.lastname", label: "firstname.lastname" },
-  { value: "f.lastname", label: "f.lastname" },
-  { value: "firstnamelastname", label: "firstnamelastname" },
-  { value: "firstname_lastname", label: "firstname_lastname" },
-  { value: "lastname.firstname", label: "lastname.firstname" },
-];
 
 const EmailFinderCard = () => {
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [domain, setDomain] = useState("");
-  const [format, setFormat] = useState("auto");
   const [result, setResult] = useState<string | null>(null);
   const [isLoading, setIsLoading] = useState(false);
   const [copied, setCopied] = useState(false);
 
   const generateEmail = () => {
     if (!firstName || !lastName || !domain) {
-      toast.error("Please fill in all required fields");
+      toast.error("Please fill in all fields");
       return;
     }
 
     setIsLoading(true);
 
-    // Simulate API call
     setTimeout(() => {
       const cleanDomain = domain.replace(/^(https?:\/\/)?(www\.)?/, "").replace(/\/$/, "");
-      let email = "";
-
-      if (format === "auto" || format === "firstname.lastname") {
-        email = `${firstName.toLowerCase()}.${lastName.toLowerCase()}@${cleanDomain}`;
-      } else if (format === "f.lastname") {
-        email = `${firstName.charAt(0).toLowerCase()}.${lastName.toLowerCase()}@${cleanDomain}`;
-      } else if (format === "firstnamelastname") {
-        email = `${firstName.toLowerCase()}${lastName.toLowerCase()}@${cleanDomain}`;
-      } else if (format === "firstname_lastname") {
-        email = `${firstName.toLowerCase()}_${lastName.toLowerCase()}@${cleanDomain}`;
-      } else if (format === "lastname.firstname") {
-        email = `${lastName.toLowerCase()}.${firstName.toLowerCase()}@${cleanDomain}`;
-      }
-
+      const email = `${firstName.toLowerCase()}.${lastName.toLowerCase()}@${cleanDomain}`;
       setResult(email);
       setIsLoading(false);
-      toast.success("Email generated successfully!");
-    }, 1500);
+      toast.success("Email generated!");
+    }, 1000);
   };
 
   const copyToClipboard = () => {
     if (result) {
       navigator.clipboard.writeText(result);
       setCopied(true);
-      toast.success("Copied to clipboard!");
+      toast.success("Copied!");
       setTimeout(() => setCopied(false), 2000);
     }
   };
@@ -74,7 +43,6 @@ const EmailFinderCard = () => {
     setFirstName("");
     setLastName("");
     setDomain("");
-    setFormat("auto");
     setResult(null);
   };
 
@@ -137,22 +105,6 @@ const EmailFinderCard = () => {
             </div>
           </div>
 
-          <div className="space-y-2">
-            <Label>Email Format (Optional)</Label>
-            <Select value={format} onValueChange={setFormat}>
-              <SelectTrigger>
-                <SelectValue placeholder="Select format" />
-              </SelectTrigger>
-              <SelectContent>
-                {emailFormats.map((f) => (
-                  <SelectItem key={f.value} value={f.value}>
-                    {f.label}
-                  </SelectItem>
-                ))}
-              </SelectContent>
-            </Select>
-          </div>
-
           <Button
             onClick={generateEmail}
             disabled={isLoading}
@@ -184,20 +136,18 @@ const EmailFinderCard = () => {
                   {result}
                 </p>
               </div>
-              <div className="flex gap-2">
-                <Button
-                  variant="outline"
-                  size="sm"
-                  onClick={copyToClipboard}
-                  className="shrink-0"
-                >
-                  {copied ? (
-                    <Check className="w-4 h-4" />
-                  ) : (
-                    <Copy className="w-4 h-4" />
-                  )}
-                </Button>
-              </div>
+              <Button
+                variant="outline"
+                size="sm"
+                onClick={copyToClipboard}
+                className="shrink-0"
+              >
+                {copied ? (
+                  <Check className="w-4 h-4" />
+                ) : (
+                  <Copy className="w-4 h-4" />
+                )}
+              </Button>
             </div>
             <Button
               variant="ghost"

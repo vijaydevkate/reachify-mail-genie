@@ -1,8 +1,10 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import EmailFinderCard from "@/components/EmailFinderCard";
+import AuthDialog from "@/components/AuthDialog";
 import {
   ArrowRight,
   Target,
@@ -14,6 +16,8 @@ import {
 } from "lucide-react";
 
 const Index = () => {
+  const [authOpen, setAuthOpen] = useState(false);
+
   const features = [
     {
       icon: Target,
@@ -68,12 +72,10 @@ const Index = () => {
                 recruiters, and marketers. Connect with anyone, anywhere.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                <Link to="/auth?mode=signup">
-                  <Button variant="hero" size="lg">
-                    Try it Free
-                    <ArrowRight className="w-5 h-5" />
-                  </Button>
-                </Link>
+                <Button variant="hero" size="lg" onClick={() => setAuthOpen(true)}>
+                  Try it Free
+                  <ArrowRight className="w-5 h-5" />
+                </Button>
                 <Link to="/how-it-works">
                   <Button variant="outline" size="lg">
                     See How It Works
@@ -192,21 +194,22 @@ const Index = () => {
                 Join thousands of professionals who trust Reachify for their
                 outreach needs.
               </p>
-              <Link to="/auth?mode=signup">
-                <Button
-                  size="lg"
-                  className="bg-background text-foreground hover:bg-background/90"
-                >
-                  Get Started Free
-                  <ArrowRight className="w-5 h-5" />
-                </Button>
-              </Link>
+              <Button
+                size="lg"
+                className="bg-background text-foreground hover:bg-background/90"
+                onClick={() => setAuthOpen(true)}
+              >
+                Get Started Free
+                <ArrowRight className="w-5 h-5" />
+              </Button>
             </div>
           </div>
         </div>
       </section>
 
       <Footer />
+      
+      <AuthDialog open={authOpen} onOpenChange={setAuthOpen} defaultMode="signup" />
     </div>
   );
 };
