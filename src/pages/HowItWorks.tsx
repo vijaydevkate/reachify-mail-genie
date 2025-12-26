@@ -64,7 +64,7 @@ const HowItWorks = () => {
           {/* Hero */}
           <div className="text-center mb-20 animate-slide-up">
             <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
-              How <span className="text-gradient">Reachify</span> Works
+              How <span className="text-gradient">Hootly</span> Works
             </h1>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
               Discover professional email addresses in three simple steps.
@@ -88,7 +88,7 @@ const HowItWorks = () => {
                     <div className="w-20 h-20 rounded-2xl gradient-primary flex items-center justify-center mx-auto mb-6 shadow-button relative z-10">
                       <step.icon className="w-10 h-10 text-primary-foreground" />
                     </div>
-                    <div className="absolute -top-2 -right-2 w-8 h-8 rounded-full bg-accent flex items-center justify-center text-sm font-bold text-accent-foreground z-20">
+                    <div className="absolute -top-2 -right-2 w-8 h-8 rounded-full bg-accent border border-primary/30 flex items-center justify-center text-sm font-bold text-accent-foreground z-20">
                       {index + 1}
                     </div>
                     <h3 className="text-xl font-semibold text-foreground mb-3">
@@ -102,7 +102,7 @@ const HowItWorks = () => {
           </div>
 
           {/* Benefits */}
-          <div className="bg-muted/50 rounded-3xl p-12 mb-20">
+          <div className="bg-card/50 border border-border rounded-3xl p-12 mb-20">
             <h2 className="text-3xl font-bold text-foreground text-center mb-12">
               Why Email Discovery Matters
             </h2>
@@ -110,11 +110,11 @@ const HowItWorks = () => {
               {benefits.map((benefit, index) => (
                 <div
                   key={index}
-                  className="bg-card rounded-2xl p-8 shadow-card border border-border animate-slide-up"
+                  className="bg-card rounded-2xl p-8 shadow-card border border-border hover:shadow-card-hover hover:border-primary/30 transition-all duration-300 animate-slide-up"
                   style={{ animationDelay: `${index * 0.1}s` }}
                 >
                   <div className="w-14 h-14 rounded-xl bg-accent flex items-center justify-center mb-6">
-                    <benefit.icon className="w-7 h-7 text-primary" />
+                    <benefit.icon className="w-7 h-7 text-accent-foreground" />
                   </div>
                   <h3 className="text-xl font-semibold text-foreground mb-3">
                     {benefit.title}
@@ -133,7 +133,7 @@ const HowItWorks = () => {
             <p className="text-muted-foreground mb-8">
               Start finding professional email addresses in seconds.
             </p>
-            <Link to="/finder">
+            <Link to="/">
               <Button variant="hero" size="lg">
                 Try Email Finder
                 <ArrowRight className="w-5 h-5" />

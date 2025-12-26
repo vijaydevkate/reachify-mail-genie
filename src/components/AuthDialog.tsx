@@ -8,9 +8,10 @@ import {
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { Mail, Lock, User, Loader2, Eye, EyeOff } from "lucide-react";
+import { Lock, User, Loader2, Eye, EyeOff, Mail } from "lucide-react";
 import { toast } from "sonner";
 import { useAuth } from "@/hooks/useAuth";
+import HootlyLogo from "@/components/HootlyLogo";
 
 interface AuthDialogProps {
   open: boolean;
@@ -68,13 +69,11 @@ const AuthDialog = ({ open, onOpenChange, defaultMode = "signin" }: AuthDialogPr
 
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
-      <DialogContent className="sm:max-w-md">
+      <DialogContent className="sm:max-w-md bg-card border-border">
         <DialogHeader>
           <div className="flex items-center gap-2 mb-2">
-            <div className="w-9 h-9 rounded-lg gradient-primary flex items-center justify-center shadow-button">
-              <Mail className="w-5 h-5 text-primary-foreground" />
-            </div>
-            <span className="text-xl font-bold text-foreground">Reachify</span>
+            <HootlyLogo size={36} />
+            <span className="text-xl font-bold text-foreground">Hootly</span>
           </div>
           <DialogTitle className="text-2xl">
             {mode === "signin" ? "Welcome Back" : "Create Account"}
@@ -99,7 +98,7 @@ const AuthDialog = ({ open, onOpenChange, defaultMode = "signin" }: AuthDialogPr
                   onChange={(e) =>
                     setFormData({ ...formData, fullName: e.target.value })
                   }
-                  className="pl-10"
+                  className="pl-10 bg-background border-border"
                 />
               </div>
             </div>
@@ -117,7 +116,7 @@ const AuthDialog = ({ open, onOpenChange, defaultMode = "signin" }: AuthDialogPr
                 onChange={(e) =>
                   setFormData({ ...formData, email: e.target.value })
                 }
-                className="pl-10"
+                className="pl-10 bg-background border-border"
               />
             </div>
           </div>
@@ -134,7 +133,7 @@ const AuthDialog = ({ open, onOpenChange, defaultMode = "signin" }: AuthDialogPr
                 onChange={(e) =>
                   setFormData({ ...formData, password: e.target.value })
                 }
-                className="pl-10 pr-10"
+                className="pl-10 pr-10 bg-background border-border"
               />
               <button
                 type="button"
