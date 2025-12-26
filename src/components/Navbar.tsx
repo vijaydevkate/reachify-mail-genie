@@ -1,9 +1,10 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Menu, X, Mail, LogOut } from "lucide-react";
+import { Menu, X, LogOut } from "lucide-react";
 import { useAuth } from "@/hooks/useAuth";
 import AuthDialog from "@/components/AuthDialog";
+import HootlyLogo from "@/components/HootlyLogo";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -15,7 +16,6 @@ const Navbar = () => {
   const publicLinks = [
     { name: "How It Works", href: "/how-it-works" },
     { name: "Email Templates", href: "/templates" },
-    { name: "About", href: "/about" },
     { name: "Contact Us", href: "/contact" },
   ];
 
@@ -33,10 +33,8 @@ const Navbar = () => {
           <div className="flex items-center justify-between h-16">
             {/* Logo */}
             <Link to="/" className="flex items-center gap-2 group">
-              <div className="w-9 h-9 rounded-lg gradient-primary flex items-center justify-center shadow-button transition-transform group-hover:scale-105">
-                <Mail className="w-5 h-5 text-primary-foreground" />
-              </div>
-              <span className="text-xl font-bold text-foreground">Reachify</span>
+              <HootlyLogo size={36} className="transition-transform group-hover:scale-105" />
+              <span className="text-xl font-bold text-foreground">Hootly</span>
             </Link>
 
             {/* Desktop Navigation - Only show for non-authenticated users */}

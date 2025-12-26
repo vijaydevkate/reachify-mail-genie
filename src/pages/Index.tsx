@@ -13,6 +13,7 @@ import {
   Users,
   TrendingUp,
   Mail,
+  Sparkles,
 } from "lucide-react";
 
 const Index = () => {
@@ -53,14 +54,16 @@ const Index = () => {
       {/* Hero Section */}
       <section className="pt-32 pb-20 px-4 relative overflow-hidden">
         {/* Background decoration */}
-        <div className="absolute top-20 left-1/2 -translate-x-1/2 w-[800px] h-[800px] bg-primary/5 rounded-full blur-3xl pointer-events-none" />
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[1000px] gradient-glow pointer-events-none animate-pulse-glow" />
+        <div className="absolute top-40 left-20 w-72 h-72 bg-primary/10 rounded-full blur-3xl pointer-events-none" />
+        <div className="absolute top-60 right-20 w-96 h-96 bg-accent/20 rounded-full blur-3xl pointer-events-none" />
 
         <div className="container mx-auto relative">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Left Content */}
             <div className="text-center lg:text-left animate-slide-up">
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent text-accent-foreground text-sm font-medium mb-6">
-                <Zap className="w-4 h-4" />
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent border border-primary/20 text-accent-foreground text-sm font-medium mb-6">
+                <Sparkles className="w-4 h-4" />
                 AI-Powered Email Discovery
               </div>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6 leading-tight">
@@ -93,7 +96,7 @@ const Index = () => {
       </section>
 
       {/* Stats Section */}
-      <section className="py-16 bg-muted/50">
+      <section className="py-16 bg-card/50 border-y border-border">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {stats.map((stat, index) => (
@@ -117,7 +120,7 @@ const Index = () => {
         <div className="container mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-              Why Choose Reachify?
+              Why Choose <span className="text-gradient">Hootly</span>?
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
               Built for professionals who need reliable, fast, and accurate
@@ -129,10 +132,10 @@ const Index = () => {
             {features.map((feature, index) => (
               <div
                 key={index}
-                className="bg-card rounded-2xl p-8 shadow-card border border-border hover:shadow-card-hover transition-all duration-300 animate-slide-up"
+                className="bg-card rounded-2xl p-8 shadow-card border border-border hover:shadow-card-hover hover:border-primary/30 transition-all duration-300 animate-slide-up group"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
-                <div className="w-14 h-14 rounded-xl gradient-primary flex items-center justify-center mb-6 shadow-button">
+                <div className="w-14 h-14 rounded-xl gradient-primary flex items-center justify-center mb-6 shadow-button group-hover:shadow-glow transition-shadow">
                   <feature.icon className="w-7 h-7 text-primary-foreground" />
                 </div>
                 <h3 className="text-xl font-semibold text-foreground mb-3">
@@ -146,7 +149,7 @@ const Index = () => {
       </section>
 
       {/* Use Cases Section */}
-      <section className="py-20 px-4 bg-muted/50">
+      <section className="py-20 px-4 bg-card/50 border-y border-border">
         <div className="container mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
@@ -166,10 +169,10 @@ const Index = () => {
             ].map((item, index) => (
               <div
                 key={index}
-                className="bg-card rounded-xl p-6 shadow-card border border-border text-center hover:shadow-card-hover transition-all duration-300"
+                className="bg-card rounded-xl p-6 shadow-card border border-border text-center hover:shadow-card-hover hover:border-primary/30 transition-all duration-300"
               >
                 <div className="w-12 h-12 rounded-lg bg-accent flex items-center justify-center mx-auto mb-4">
-                  <item.icon className="w-6 h-6 text-primary" />
+                  <item.icon className="w-6 h-6 text-accent-foreground" />
                 </div>
                 <h3 className="font-semibold text-foreground mb-2">
                   {item.title}
@@ -184,14 +187,14 @@ const Index = () => {
       {/* CTA Section */}
       <section className="py-20 px-4">
         <div className="container mx-auto">
-          <div className="gradient-hero rounded-3xl p-12 md:p-16 text-center relative overflow-hidden">
+          <div className="gradient-primary rounded-3xl p-12 md:p-16 text-center relative overflow-hidden">
             <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGQ9Ik0zNiAxOGMzLjMxNCAwIDYgMi42ODYgNiA2cy0yLjY4NiA2LTYgNi02LTIuNjg2LTYtNiAyLjY4Ni02IDYtNiIgc3Ryb2tlPSJyZ2JhKDI1NSwyNTUsMjU1LDAuMSkiIHN0cm9rZS13aWR0aD0iMiIvPjwvZz48L3N2Zz4=')] opacity-20" />
             <div className="relative">
-              <h2 className="text-3xl md:text-4xl font-bold text-background mb-4">
+              <h2 className="text-3xl md:text-4xl font-bold text-primary-foreground mb-4">
                 Ready to Find Emails Faster?
               </h2>
-              <p className="text-lg text-background/80 mb-8 max-w-2xl mx-auto">
-                Join thousands of professionals who trust Reachify for their
+              <p className="text-lg text-primary-foreground/80 mb-8 max-w-2xl mx-auto">
+                Join thousands of professionals who trust Hootly for their
                 outreach needs.
               </p>
               <Button
