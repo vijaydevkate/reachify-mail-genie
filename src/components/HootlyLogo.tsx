@@ -15,9 +15,8 @@ const HootlyLogo = ({ className = "", size = 32 }: HootlyLogoProps) => {
     >
       <defs>
         <linearGradient id="owlGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-          <stop offset="0%" stopColor="hsl(270, 100%, 65%)" />
-          <stop offset="50%" stopColor="hsl(320, 100%, 60%)" />
-          <stop offset="100%" stopColor="hsl(200, 100%, 60%)" />
+          <stop offset="0%" stopColor="hsl(38, 92%, 50%)" />
+          <stop offset="100%" stopColor="hsl(25, 95%, 53%)" />
         </linearGradient>
       </defs>
       

@@ -6,100 +6,100 @@
 
 @layer base {
   :root {
-    --background: 240 15% 3%;
-    --foreground: 0 0% 98%;
+    --background: 220 20% 4%;
+    --foreground: 45 20% 96%;
 
-    --card: 240 15% 6%;
-    --card-foreground: 0 0% 98%;
+    --card: 220 20% 7%;
+    --card-foreground: 45 20% 96%;
 
-    --popover: 240 15% 6%;
-    --popover-foreground: 0 0% 98%;
+    --popover: 220 20% 7%;
+    --popover-foreground: 45 20% 96%;
 
-    --primary: 270 100% 65%;
-    --primary-foreground: 0 0% 100%;
+    --primary: 38 92% 50%;
+    --primary-foreground: 220 20% 4%;
 
-    --secondary: 240 15% 12%;
-    --secondary-foreground: 0 0% 90%;
+    --secondary: 220 15% 12%;
+    --secondary-foreground: 45 15% 85%;
 
-    --muted: 240 15% 10%;
-    --muted-foreground: 240 10% 55%;
+    --muted: 220 15% 10%;
+    --muted-foreground: 220 10% 50%;
 
-    --accent: 270 80% 15%;
-    --accent-foreground: 270 100% 80%;
+    --accent: 38 50% 12%;
+    --accent-foreground: 38 80% 70%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 240 15% 15%;
-    --input: 240 15% 15%;
-    --ring: 270 100% 65%;
+    --border: 220 15% 14%;
+    --input: 220 15% 14%;
+    --ring: 38 92% 50%;
 
     --radius: 0.75rem;
 
-    /* Hootly custom tokens - Vibrant AI aesthetic */
-    --gradient-primary: linear-gradient(135deg, hsl(270, 100%, 65%) 0%, hsl(320, 100%, 60%) 50%, hsl(200, 100%, 60%) 100%);
-    --gradient-hero: linear-gradient(135deg, hsl(270, 80%, 8%) 0%, hsl(240, 30%, 5%) 100%);
-    --gradient-card: linear-gradient(145deg, hsl(240, 15%, 8%) 0%, hsl(240, 15%, 5%) 100%);
-    --gradient-glow: radial-gradient(ellipse at center, hsla(270, 100%, 65%, 0.15) 0%, transparent 70%);
-    --shadow-card: 0 4px 24px -4px hsla(270, 100%, 65%, 0.1);
-    --shadow-card-hover: 0 20px 60px -12px hsla(270, 100%, 65%, 0.3);
-    --shadow-button: 0 4px 20px -2px hsla(270, 100%, 65%, 0.5);
-    --shadow-glow: 0 0 60px hsla(270, 100%, 65%, 0.4);
+    /* Hootly custom tokens - Warm AI aesthetic */
+    --gradient-primary: linear-gradient(135deg, hsl(38, 92%, 50%) 0%, hsl(25, 95%, 53%) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(220, 25%, 6%) 0%, hsl(220, 20%, 4%) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(220, 20%, 8%) 0%, hsl(220, 20%, 5%) 100%);
+    --gradient-glow: radial-gradient(ellipse at center, hsla(38, 92%, 50%, 0.08) 0%, transparent 70%);
+    --shadow-card: 0 4px 24px -4px hsla(0, 0%, 0%, 0.2);
+    --shadow-card-hover: 0 20px 60px -12px hsla(38, 92%, 50%, 0.15);
+    --shadow-button: 0 4px 20px -2px hsla(38, 92%, 50%, 0.35);
+    --shadow-glow: 0 0 60px hsla(38, 92%, 50%, 0.25);
 
-    --sidebar-background: 240 15% 5%;
-    --sidebar-foreground: 0 0% 90%;
-    --sidebar-primary: 270 100% 65%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 270 80% 15%;
-    --sidebar-accent-foreground: 270 100% 80%;
-    --sidebar-border: 240 15% 15%;
-    --sidebar-ring: 270 100% 65%;
+    --sidebar-background: 220 20% 5%;
+    --sidebar-foreground: 45 15% 90%;
+    --sidebar-primary: 38 92% 50%;
+    --sidebar-primary-foreground: 220 20% 4%;
+    --sidebar-accent: 38 50% 12%;
+    --sidebar-accent-foreground: 38 80% 70%;
+    --sidebar-border: 220 15% 14%;
+    --sidebar-ring: 38 92% 50%;
   }
 
   .dark {
-    --background: 240 15% 3%;
-    --foreground: 0 0% 98%;
+    --background: 220 20% 4%;
+    --foreground: 45 20% 96%;
 
-    --card: 240 15% 6%;
-    --card-foreground: 0 0% 98%;
+    --card: 220 20% 7%;
+    --card-foreground: 45 20% 96%;
 
-    --popover: 240 15% 6%;
-    --popover-foreground: 0 0% 98%;
+    --popover: 220 20% 7%;
+    --popover-foreground: 45 20% 96%;
 
-    --primary: 270 100% 65%;
-    --primary-foreground: 0 0% 100%;
+    --primary: 38 92% 50%;
+    --primary-foreground: 220 20% 4%;
 
-    --secondary: 240 15% 12%;
-    --secondary-foreground: 0 0% 90%;
+    --secondary: 220 15% 12%;
+    --secondary-foreground: 45 15% 85%;
 
-    --muted: 240 15% 10%;
-    --muted-foreground: 240 10% 55%;
+    --muted: 220 15% 10%;
+    --muted-foreground: 220 10% 50%;
 
-    --accent: 270 80% 15%;
-    --accent-foreground: 270 100% 80%;
+    --accent: 38 50% 12%;
+    --accent-foreground: 38 80% 70%;
 
     --destructive: 0 62% 50%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 240 15% 15%;
-    --input: 240 15% 15%;
-    --ring: 270 100% 65%;
+    --border: 220 15% 14%;
+    --input: 220 15% 14%;
+    --ring: 38 92% 50%;
 
-    --gradient-primary: linear-gradient(135deg, hsl(270, 100%, 65%) 0%, hsl(320, 100%, 60%) 50%, hsl(200, 100%, 60%) 100%);
-    --gradient-hero: linear-gradient(135deg, hsl(270, 80%, 8%) 0%, hsl(240, 30%, 5%) 100%);
-    --gradient-card: linear-gradient(145deg, hsl(240, 15%, 8%) 0%, hsl(240, 15%, 5%) 100%);
+    --gradient-primary: linear-gradient(135deg, hsl(38, 92%, 50%) 0%, hsl(25, 95%, 53%) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(220, 25%, 6%) 0%, hsl(220, 20%, 4%) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(220, 20%, 8%) 0%, hsl(220, 20%, 5%) 100%);
     --shadow-card: 0 4px 24px -4px hsla(0, 0%, 0%, 0.3);
-    --shadow-card-hover: 0 20px 60px -12px hsla(270, 100%, 65%, 0.35);
-    --shadow-button: 0 4px 20px -2px hsla(270, 100%, 65%, 0.5);
+    --shadow-card-hover: 0 20px 60px -12px hsla(38, 92%, 50%, 0.2);
+    --shadow-button: 0 4px 20px -2px hsla(38, 92%, 50%, 0.4);
 
-    --sidebar-background: 240 15% 5%;
-    --sidebar-foreground: 0 0% 90%;
-    --sidebar-primary: 270 100% 65%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 270 80% 15%;
-    --sidebar-accent-foreground: 270 100% 80%;
-    --sidebar-border: 240 15% 15%;
-    --sidebar-ring: 270 100% 65%;
+    --sidebar-background: 220 20% 5%;
+    --sidebar-foreground: 45 15% 90%;
+    --sidebar-primary: 38 92% 50%;
+    --sidebar-primary-foreground: 220 20% 4%;
+    --sidebar-accent: 38 50% 12%;
+    --sidebar-accent-foreground: 38 80% 70%;
+    --sidebar-border: 220 15% 14%;
+    --sidebar-ring: 38 92% 50%;
   }
 }
 
@@ -171,12 +171,7 @@
   }
 
   .animate-pulse-glow {
-    animation: pulseGlow 3s ease-in-out infinite;
-  }
-
-  .animate-gradient {
-    background-size: 200% 200%;
-    animation: gradientShift 8s ease infinite;
+    animation: pulseGlow 4s ease-in-out infinite;
   }
 }
 
@@ -222,23 +217,9 @@
 
 @keyframes pulseGlow {
   0%, 100% {
-    opacity: 0.5;
-    transform: scale(1);
+    opacity: 0.4;
   }
   50% {
-    opacity: 0.8;
-    transform: scale(1.05);
-  }
-}
-
-@keyframes gradientShift {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
+    opacity: 0.7;
   }
 }

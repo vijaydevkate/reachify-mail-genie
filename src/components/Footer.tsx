@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Twitter, Linkedin, Github } from "lucide-react";
+import { Linkedin } from "lucide-react";
 import HootlyLogo from "@/components/HootlyLogo";
 
 const Footer = () => {
@@ -23,19 +23,7 @@ const Footer = () => {
                 href="#"
                 className="w-10 h-10 rounded-full bg-muted flex items-center justify-center hover:bg-accent transition-colors text-muted-foreground hover:text-accent-foreground"
               >
-                <Twitter className="w-5 h-5" />
-              </a>
-              <a
-                href="#"
-                className="w-10 h-10 rounded-full bg-muted flex items-center justify-center hover:bg-accent transition-colors text-muted-foreground hover:text-accent-foreground"
-              >
                 <Linkedin className="w-5 h-5" />
-              </a>
-              <a
-                href="#"
-                className="w-10 h-10 rounded-full bg-muted flex items-center justify-center hover:bg-accent transition-colors text-muted-foreground hover:text-accent-foreground"
-              >
-                <Github className="w-5 h-5" />
               </a>
             </div>
           </div>
