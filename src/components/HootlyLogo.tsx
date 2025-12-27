@@ -15,8 +15,9 @@ const HootlyLogo = ({ className = "", size = 32 }: HootlyLogoProps) => {
     >
       <defs>
         <linearGradient id="owlGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-          <stop offset="0%" stopColor="hsl(38, 92%, 50%)" />
-          <stop offset="100%" stopColor="hsl(25, 95%, 53%)" />
+          <stop offset="0%" stopColor="hsl(250, 85%, 65%)" />
+          <stop offset="50%" stopColor="hsl(280, 80%, 60%)" />
+          <stop offset="100%" stopColor="hsl(320, 70%, 55%)" />
         </linearGradient>
       </defs>
       
@@ -48,7 +49,7 @@ const HootlyLogo = ({ className = "", size = 32 }: HootlyLogoProps) => {
       {/* Beak */}
       <path
         d="M24 28 L21 33 L24 36 L27 33 Z"
-        fill="hsl(45, 100%, 55%)"
+        fill="hsl(280, 80%, 60%)"
       />
     </svg>
   );

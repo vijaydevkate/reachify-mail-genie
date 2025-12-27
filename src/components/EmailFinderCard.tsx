@@ -4,16 +4,25 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { User, Building2, Sparkles, Copy, Check, Loader2 } from "lucide-react";
 import { toast } from "sonner";
+import { useAuth } from "@/hooks/useAuth";
+import AuthDialog from "@/components/AuthDialog";
 
 const EmailFinderCard = () => {
+  const { isAuthenticated } = useAuth();
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [domain, setDomain] = useState("");
   const [result, setResult] = useState<string | null>(null);
   const [isLoading, setIsLoading] = useState(false);
   const [copied, setCopied] = useState(false);
+  const [authOpen, setAuthOpen] = useState(false);
 
   const generateEmail = () => {
+    if (!isAuthenticated) {
+      setAuthOpen(true);
+      return;
+    }
+
     if (!firstName || !lastName || !domain) {
       toast.error("Please fill in all fields");
       return;
@@ -160,6 +169,8 @@ const EmailFinderCard = () => {
           </div>
         )}
       </div>
+      
+      <AuthDialog open={authOpen} onOpenChange={setAuthOpen} defaultMode="signup" />
     </div>
   );
 };
