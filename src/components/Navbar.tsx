@@ -32,9 +32,8 @@ const Navbar = () => {
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between h-16">
             {/* Logo */}
-            <Link to="/" className="flex items-center gap-2 group">
+            <Link to="/" className="flex items-center group">
               <HootlyLogo size={36} className="transition-transform group-hover:scale-105" />
-              <span className="text-xl font-bold text-foreground">Hootly</span>
             </Link>
 
             {/* Desktop Navigation - Only show for non-authenticated users */}
