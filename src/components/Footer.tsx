@@ -9,9 +9,8 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
           {/* Brand */}
           <div className="col-span-1 md:col-span-2">
-            <Link to="/" className="flex items-center gap-2 mb-4">
+            <Link to="/" className="flex items-center mb-4">
               <HootlyLogo size={36} />
-              <span className="text-xl font-bold text-foreground">Hootly</span>
             </Link>
             <p className="text-muted-foreground max-w-sm mb-6">
               Find professional email addresses in seconds with our AI-powered
@@ -20,8 +19,10 @@ const Footer = () => {
             </p>
             <div className="flex gap-4">
               <a
-                href="#"
-                className="w-10 h-10 rounded-full bg-muted flex items-center justify-center hover:bg-accent transition-colors text-muted-foreground hover:text-accent-foreground"
+                href="https://www.linkedin.com/company/thehootly/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-all duration-300 text-primary hover:scale-110"
               >
                 <Linkedin className="w-5 h-5" />
               </a>
