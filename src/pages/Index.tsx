@@ -107,13 +107,13 @@ const Index = () => {
             {features.map((feature, index) => (
               <div
                 key={index}
-                className="bg-card rounded-2xl p-8 shadow-card border border-border hover:shadow-card-hover hover:border-primary/30 transition-all duration-300 animate-slide-up group"
+                className="bg-card rounded-2xl p-8 shadow-card border border-border interactive-card animate-slide-up group cursor-pointer"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
-                <div className="w-14 h-14 rounded-xl gradient-primary flex items-center justify-center mb-6 shadow-button group-hover:shadow-glow transition-shadow">
+                <div className="w-14 h-14 rounded-xl gradient-primary flex items-center justify-center mb-6 shadow-button group-hover:shadow-glow group-hover:scale-110 transition-all duration-300">
                   <feature.icon className="w-7 h-7 text-primary-foreground" />
                 </div>
-                <h3 className="text-xl font-semibold text-foreground mb-3">
+                <h3 className="text-xl font-semibold text-foreground mb-3 group-hover:text-primary transition-colors">
                   {feature.title}
                 </h3>
                 <p className="text-muted-foreground">{feature.description}</p>
@@ -144,12 +144,12 @@ const Index = () => {
             ].map((item, index) => (
               <div
                 key={index}
-                className="bg-card rounded-xl p-6 shadow-card border border-border text-center hover:shadow-card-hover hover:border-primary/30 transition-all duration-300"
+                className="bg-card rounded-xl p-6 shadow-card border border-border text-center interactive-card cursor-pointer group"
               >
-                <div className="w-12 h-12 rounded-lg bg-accent flex items-center justify-center mx-auto mb-4">
-                  <item.icon className="w-6 h-6 text-accent-foreground" />
+                <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mx-auto mb-4 group-hover:bg-primary group-hover:scale-110 transition-all duration-300">
+                  <item.icon className="w-6 h-6 text-primary group-hover:text-primary-foreground transition-colors" />
                 </div>
-                <h3 className="font-semibold text-foreground mb-2">
+                <h3 className="font-semibold text-foreground mb-2 group-hover:text-primary transition-colors">
                   {item.title}
                 </h3>
                 <p className="text-sm text-muted-foreground">{item.desc}</p>

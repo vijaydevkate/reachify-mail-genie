@@ -57,9 +57,9 @@ const EmailFinderCard = () => {
 
   return (
     <div className="w-full max-w-lg mx-auto">
-      <div className="bg-card rounded-2xl shadow-card p-8 border border-border animate-scale-in">
+      <div className="bg-card rounded-2xl shadow-card p-8 border border-border animate-scale-in hover:shadow-card-hover transition-all duration-500 group">
         <div className="text-center mb-8">
-          <div className="w-14 h-14 rounded-xl gradient-primary flex items-center justify-center mx-auto mb-4 shadow-button">
+          <div className="w-14 h-14 rounded-xl gradient-primary flex items-center justify-center mx-auto mb-4 shadow-button group-hover:shadow-glow transition-shadow duration-500 animate-bounce-subtle">
             <Sparkles className="w-7 h-7 text-primary-foreground" />
           </div>
           <h2 className="text-2xl font-bold text-foreground mb-2">
