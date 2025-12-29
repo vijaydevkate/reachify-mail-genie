@@ -16,7 +16,6 @@ const Navbar = () => {
   const publicLinks = [
     { name: "How It Works", href: "/how-it-works" },
     { name: "Email Templates", href: "/templates" },
-    { name: "Contact Us", href: "/contact" },
   ];
 
   const isActive = (href: string) => location.pathname === href;

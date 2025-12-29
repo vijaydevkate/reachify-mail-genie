@@ -8,7 +8,6 @@ import Index from "./pages/Index";
 import Dashboard from "./pages/Dashboard";
 import HowItWorks from "./pages/HowItWorks";
 import Templates from "./pages/Templates";
-import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -30,7 +29,6 @@ const AppRoutes = () => {
       <Route path="/" element={<Index />} />
       <Route path="/how-it-works" element={<HowItWorks />} />
       <Route path="/templates" element={<Templates />} />
-      <Route path="/contact" element={<Contact />} />
       <Route path="*" element={<NotFound />} />
     </Routes>
   );
