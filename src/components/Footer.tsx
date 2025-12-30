@@ -12,8 +12,10 @@ const Footer = () => {
             <Link to="/" className="flex items-center mb-3">
               <HootlyLogo size={32} />
             </Link>
-            <p className="text-sm text-muted-foreground max-w-xs mb-4">
-              Find professional email addresses in seconds with our AI-powered email discovery tool.
+            <p className="text-muted-foreground max-w-sm mb-6">
+              Find professional email addresses in seconds with our AI-powered
+              email discovery tool. Perfect for sales, recruiting, and business
+              development.
             </p>
             <div className="flex gap-3">
               <a
