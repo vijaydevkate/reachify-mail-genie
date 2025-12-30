@@ -73,7 +73,7 @@ const AuthDialog = ({ open, onOpenChange, defaultMode = "signin" }: AuthDialogPr
         <DialogHeader>
           <div className="flex items-center gap-2 mb-2">
             <HootlyLogo size={36} />
-            <span className="text-xl font-bold text-foreground">Hootly</span>
+            <span className="text-xl font-bold text-foreground"></span>
           </div>
           <DialogTitle className="text-2xl">
             {mode === "signin" ? "Welcome Back" : "Create Account"}
