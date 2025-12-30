@@ -66,7 +66,7 @@ const EmailFinderCard = () => {
             Find Email Address
           </h2>
           <p className="text-muted-foreground">
-            Enter details to generate a professional email
+            Enter details to get a professional email
           </p>
         </div>
 
