@@ -27,12 +27,12 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-xl border-b border-border">
-        <div className="container mx-auto px-4">
-          <div className="flex items-center justify-between h-16">
+      <nav className="fixed top-0 left-0 right-0 z-50 bg-background/90 backdrop-blur-md border-b border-border/50">
+        <div className="container mx-auto px-4 max-w-6xl">
+          <div className="flex items-center justify-between h-14">
             {/* Logo */}
-            <Link to="/" className="flex items-center group">
-              <HootlyLogo size={36} className="transition-transform group-hover:scale-105" />
+            <Link to="/" className="flex items-center">
+              <HootlyLogo size={32} />
             </Link>
 
             {/* Desktop Navigation - Only show for non-authenticated users */}

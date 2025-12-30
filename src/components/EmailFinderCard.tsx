@@ -56,24 +56,24 @@ const EmailFinderCard = () => {
   };
 
   return (
-    <div className="w-full max-w-lg mx-auto">
-      <div className="bg-card rounded-2xl shadow-card p-8 border border-border animate-scale-in hover:shadow-card-hover transition-all duration-500 group">
-        <div className="text-center mb-8">
-          <div className="w-14 h-14 rounded-xl gradient-primary flex items-center justify-center mx-auto mb-4 shadow-button group-hover:shadow-glow transition-shadow duration-500 animate-bounce-subtle">
-            <Sparkles className="w-7 h-7 text-primary-foreground" />
+    <div className="w-full max-w-md mx-auto">
+      <div className="bg-card rounded-xl shadow-card p-6 border border-border transition-shadow duration-200 hover:shadow-card-hover">
+        <div className="text-center mb-6">
+          <div className="w-12 h-12 rounded-lg gradient-primary flex items-center justify-center mx-auto mb-3 shadow-button">
+            <Sparkles className="w-6 h-6 text-primary-foreground" />
           </div>
-          <h2 className="text-2xl font-bold text-foreground mb-2">
+          <h2 className="text-xl font-bold text-foreground mb-1">
             Find Email Address
           </h2>
-          <p className="text-muted-foreground">
+          <p className="text-sm text-muted-foreground">
             Enter details to get a professional email
           </p>
         </div>
 
-        <div className="space-y-5">
-          <div className="grid grid-cols-2 gap-4">
-            <div className="space-y-2">
-              <Label htmlFor="firstName">First Name</Label>
+        <div className="space-y-4">
+          <div className="grid grid-cols-2 gap-3">
+            <div className="space-y-1.5">
+              <Label htmlFor="firstName" className="text-xs">First Name</Label>
               <div className="relative">
                 <User className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground" />
                 <Input
@@ -81,12 +81,12 @@ const EmailFinderCard = () => {
                   placeholder="John"
                   value={firstName}
                   onChange={(e) => setFirstName(e.target.value)}
-                  className="pl-10"
+                  className="pl-9 h-10"
                 />
               </div>
             </div>
-            <div className="space-y-2">
-              <Label htmlFor="lastName">Last Name</Label>
+            <div className="space-y-1.5">
+              <Label htmlFor="lastName" className="text-xs">Last Name</Label>
               <div className="relative">
                 <User className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground" />
                 <Input
@@ -94,14 +94,14 @@ const EmailFinderCard = () => {
                   placeholder="Doe"
                   value={lastName}
                   onChange={(e) => setLastName(e.target.value)}
-                  className="pl-10"
+                  className="pl-9 h-10"
                 />
               </div>
             </div>
           </div>
 
-          <div className="space-y-2">
-            <Label htmlFor="domain">Company Domain</Label>
+          <div className="space-y-1.5">
+            <Label htmlFor="domain" className="text-xs">Company Domain</Label>
             <div className="relative">
               <Building2 className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground" />
               <Input
@@ -109,7 +109,7 @@ const EmailFinderCard = () => {
                 placeholder="company.com"
                 value={domain}
                 onChange={(e) => setDomain(e.target.value)}
-                className="pl-10"
+                className="pl-9 h-10"
               />
             </div>
           </div>
@@ -118,7 +118,6 @@ const EmailFinderCard = () => {
             onClick={generateEmail}
             disabled={isLoading}
             className="w-full"
-            size="lg"
           >
             {isLoading ? (
               <>
@@ -135,13 +134,13 @@ const EmailFinderCard = () => {
         </div>
 
         {result && (
-          <div className="mt-6 p-4 bg-accent rounded-xl border border-primary/20 animate-scale-in">
-            <div className="flex items-center justify-between gap-4">
+          <div className="mt-5 p-4 bg-primary/5 rounded-lg border border-primary/20">
+            <div className="flex items-center justify-between gap-3">
               <div className="flex-1 min-w-0">
-                <p className="text-xs text-muted-foreground mb-1">
+                <p className="text-xs text-muted-foreground mb-0.5">
                   Generated Email
                 </p>
-                <p className="text-lg font-semibold text-foreground truncate">
+                <p className="text-base font-semibold text-foreground truncate">
                   {result}
                 </p>
               </div>
@@ -149,7 +148,7 @@ const EmailFinderCard = () => {
                 variant="outline"
                 size="sm"
                 onClick={copyToClipboard}
-                className="shrink-0"
+                className="shrink-0 h-8"
               >
                 {copied ? (
                   <Check className="w-4 h-4" />
@@ -162,7 +161,7 @@ const EmailFinderCard = () => {
               variant="ghost"
               size="sm"
               onClick={resetForm}
-              className="w-full mt-3 text-muted-foreground"
+              className="w-full mt-2 text-muted-foreground h-8 text-xs"
             >
               Generate Another
             </Button>
