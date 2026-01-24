@@ -27,12 +27,12 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="fixed top-0 left-0 right-0 z-50 bg-background/90 backdrop-blur-md border-b border-border/50">
+      <nav className="fixed top-0 left-0 right-0 z-50 bg-transparent">
         <div className="container mx-auto px-4 max-w-6xl">
-          <div className="flex items-center justify-between h-14">
+          <div className="flex items-center justify-between h-16">
             {/* Logo */}
             <Link to="/" className="flex items-center">
-              <HootlyLogo size={32} />
+              <HootlyLogo size={36} />
             </Link>
 
             {/* Desktop Navigation - Only show for non-authenticated users */}
@@ -41,8 +41,8 @@ const Navbar = () => {
                 {publicLinks.map((link) => (
                   <Link key={link.name} to={link.href}>
                     <Button
-                      variant="nav"
-                      className={isActive(link.href) ? "text-primary" : ""}
+                      variant="ghost"
+                      className={`text-white/70 hover:text-white hover:bg-white/10 ${isActive(link.href) ? "text-white" : ""}`}
                     >
                       {link.name}
                     </Button>
@@ -55,20 +55,22 @@ const Navbar = () => {
             <div className="hidden md:flex items-center gap-3">
               {isAuthenticated ? (
                 <>
-                  <span className="text-sm text-muted-foreground">
-                    Hi, <span className="text-foreground font-medium">{user?.name}</span>
+                  <span className="text-sm text-white/60">
+                    Hi, <span className="text-white font-medium">{user?.name}</span>
                   </span>
-                  <Button variant="outline" onClick={logout}>
+                  <Button variant="outline" onClick={logout} className="border-white/20 text-white hover:bg-white/10">
                     <LogOut className="w-4 h-4 mr-2" />
                     Sign Out
                   </Button>
                 </>
               ) : (
                 <>
-                  <Button variant="ghost" onClick={() => openAuth("signin")}>
+                  <Button variant="ghost" onClick={() => openAuth("signin")} className="text-white/80 hover:text-white hover:bg-white/10">
                     Sign In
                   </Button>
-                  <Button onClick={() => openAuth("signup")}>Try it Free</Button>
+                  <Button onClick={() => openAuth("signup")} className="shadow-button">
+                    Try it Free
+                  </Button>
                 </>
               )}
             </div>
