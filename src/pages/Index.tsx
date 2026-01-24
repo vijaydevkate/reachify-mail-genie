@@ -162,9 +162,6 @@ const Index = () => {
       <section className="py-24 px-4">
         <div className="container mx-auto max-w-5xl">
           <div className="text-center mb-16">
-            <span className="inline-block px-3 py-1 rounded-full bg-accent/10 text-accent text-sm font-medium mb-4">
-              Why Choose Us
-            </span>
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
               Why Choose Hootly?
             </h2>
@@ -198,9 +195,6 @@ const Index = () => {
       <section className="py-20 px-4 bg-muted/30">
         <div className="container mx-auto max-w-5xl">
           <div className="text-center mb-14">
-            <span className="inline-block px-3 py-1 rounded-full bg-accent/10 text-accent text-sm font-medium mb-4">
-              Use Cases
-            </span>
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
               Perfect For
             </h2>
