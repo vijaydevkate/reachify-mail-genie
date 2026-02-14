@@ -70,8 +70,8 @@ const Index = () => {
         <div 
           className="absolute inset-0 opacity-[0.03]" 
           style={{
-            backgroundImage: `linear-gradient(hsla(0, 0%, 100%, 0.3) 1px, transparent 1px),
-                             linear-gradient(90deg, hsla(0, 0%, 100%, 0.3) 1px, transparent 1px)`,
+            backgroundImage: `linear-gradient(hsla(175, 70%, 50%, 0.3) 1px, transparent 1px),
+                             linear-gradient(90deg, hsla(175, 70%, 50%, 0.3) 1px, transparent 1px)`,
             backgroundSize: '60px 60px'
           }}
         />
@@ -133,7 +133,7 @@ const Index = () => {
           <div className="animate-fade-in" style={{ animationDelay: '0.4s' }}>
             <div className="relative max-w-lg mx-auto">
               {/* Glow behind card */}
-              <div className="absolute -inset-4 bg-white/10 rounded-3xl blur-2xl opacity-40" />
+              <div className="absolute -inset-4 bg-primary/20 rounded-3xl blur-2xl opacity-40" />
               <div className="relative shadow-elevated rounded-2xl">
                 <EmailFinderCard />
               </div>
